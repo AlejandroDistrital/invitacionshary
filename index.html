@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación</title>
+  <meta name="description" content="Invitación con pantalla inicial, video y scroll de páginas SVG." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="pre-start">
+  <main class="experience" id="experience">
+    <section class="screen screen--intro" id="introScreen" aria-label="Pantalla inicial">
+      <button class="screen__trigger" id="startExperience" type="button" aria-label="Reproducir video de inicio">
+        <img class="screen__media" src="img/1.svg" alt="Página 1" />
+      </button>
+    </section>
+
+    <section class="story" id="storyFlow" aria-label="Páginas de la invitación" hidden>
+      <section class="page page--interactive" data-page="3">
+        <img class="page__media" src="img/3.svg" alt="Página 3" />
+        <div class="controles-reproductor" aria-label="Controles de la invitación">
+          <p class="controles-reproductor__texto">Control de música</p>
+          <button class="boton-control" type="button" data-action="rewind" aria-label="Reproducir la canción anterior"
+            title="Canción anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z" />
+            </svg>
+          </button>
+
+          <button class="boton-control" type="button" data-action="pause" aria-label="Pausar o reanudar la música"
+            title="Pausar o reanudar la música">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+          </button>
+
+          <button class="boton-control" type="button" data-action="forward" aria-label="Reproducir la canción siguiente"
+            title="Canción siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="page" data-page="4">
+        <img class="page__media" src="img/4.svg" alt="Página 4" />
+      </section>
+      <section class="page" data-page="5">
+        <img class="page__media" src="img/5.svg" alt="Página 5" />
+        <div class="countdown-embed" aria-label="Cuenta regresiva">
+          <iframe src="https://da2szj1dnmvo4.betterimages.ai/i:Fmk4ddBTqy/v:J4MEpPdipQ/embed" title="Cuenta regresiva"
+            loading="lazy" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="no-referrer" allowtransparency="true" style="background: transparent;"></iframe>
+        </div>
+      </section>
+      <section class="page" data-page="6">
+        <img class="page__media" src="img/6.svg" alt="Página 6" />
+      </section>
+      <section class="page" data-page="7">
+        <img class="page__media" src="img/7.svg" alt="Página 7" />
+        <a class="map-link" href="https://maps.app.goo.gl/b3SsknEX3kZRfskS7" target="_blank" rel="noopener noreferrer"
+          aria-label="Ver en mapa - ubicación 1">
+          <img class="map-img" src="img/verenmapa.png" alt="Ver en mapa" />
+        </a>
+      </section>
+      <section class="page" data-page="8">
+        <img class="page__media" src="img/8.svg" alt="Página 8" />
+        <a class="map-link" href="https://maps.app.goo.gl/Xv2uMF3pT8QwgHth7" target="_blank" rel="noopener noreferrer"
+          aria-label="Ver en mapa - ubicación 2">
+          <img class="map-img" src="img/verenmapa.png" alt="Ver en mapa" />
+        </a>
+      </section>
+      <section class="page" data-page="9">
+        <img class="page__media" src="img/9.svg" alt="Página 9" />
+      </section>
+      <section class="page" data-page="9">
+        <img class="page__media" src="img/9.svg" alt="Página 9" />
+      </section>
+      <section class="page" data-page="10">
+        <img class="page__media" src="img/10.svg" alt="Página 10" />
+      </section>
+      <section class="page" data-page="11">
+        <img class="page__media" src="img/11.svg" alt="Página 11" />
+        <a class="map-link"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfkeqF7NhhCu1DNdx-HKrkclOX8nB84neDOvFEDeAHgLlZYrw/viewform?usp=publish-editor"
+          target="_blank" rel="noopener noreferrer" aria-label="Confirmar asistencia">
+          <img class="map-img" src="img/confirmar.png" alt="Confirmar" />
+        </a>
+      </section>
+      <section class="page" data-page="12">
+        <img class="page__media" src="img/12.svg" alt="Página 12" />
+      </section>
+    </section>
+  </main>
+
+
+  <div class="video-overlay" id="videoOverlay" hidden aria-hidden="true">
+    <video class="video-overlay__media" id="introVideo" playsinline preload="auto" src="files/videoinicio.mp4"></video>
+  </div>
+
+  <audio id="backgroundMusic" preload="auto" src="musica/1.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
